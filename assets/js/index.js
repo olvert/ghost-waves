@@ -2,19 +2,63 @@
  * Main JS file for Readable behaviours
  */
 
-/*globals jQuery, document */
-(function ($) {
-    "use strict";
+var myScroll;
+var maxPages;
+var page;
+var url;
 
-    $(document).ready(function(){
+function loaded(pages) {
+  setMaxPages(pages);
+  initValues();
+  initMyScroll();
+}
 
-        // On the home page, move the blog icon inside the header 
-        // for better relative/absolute positioning.
+function initValues() {
+  url = window.location;
+  page = 2;
+}
 
-        //$("#blog-logo").prependTo("#site-head-content");
-        $("div.masthead").autoHidingNavbar();
+function initMyScroll() {
+  myScroll = new IScroll('#wrapper', {
+    mouseWheel: true,
+    infiniteElements: '#scroller .post-body',
+    //infiniteLimit: 2000,
+    dataset: requestData,
+    dataFiller: updateContent,
+    cacheSize: 2
+  });
+}
 
-    });
+function setMaxPages(string) {
+  maxPages = parseInt(string);
+}
 
-}(jQuery));
+function requestData(start, count) {
+  console.log('start', start);
+  console.log('count', count);
+  if (page <= maxPages) {
+    getData(start, page);
+    page++;
+  }
+}
 
+function getData(start, page) {
+  var www = url + 'page/' + page
+  $.get(www, function(html) {
+    var wrapper = $(html).find('#wrapper')[0];
+    var posts = $(wrapper).children();
+    myScroll.updateCache(start, posts);
+  });
+}
+
+function updateContent(el, data) {
+  console.log('el', el);
+  console.log('data', data);
+  myScroll.refresh();
+  //el.innerHTML = data;
+  //$('#wrapper').append($(posts).html());
+}
+
+function test(s) {
+  console.log(s);
+}
