@@ -38,14 +38,14 @@ img {
 
 .content {
   width: 750px;
-  margin-left: 2%;
+  margin: auto;
 }
 
 .post {
   text-align: left;
   max-width: 100%;
 
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 
 .post-title {}
@@ -60,7 +60,7 @@ img {
     margin-top: -16px;
     position: relative;
 
-    font-size: 12px;
+    font-size: 10px;
 }
 
 .post-foot a {
@@ -91,6 +91,19 @@ img {
 
 #wrapper {
   position:relative;
+}
+
+#nav {
+  display: none;
+}
+
+#infscr-loading img {
+  display: none !important;
+}
+
+.info {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 /* QUERIES */

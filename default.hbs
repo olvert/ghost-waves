@@ -8,14 +8,14 @@
     <link rel="stylesheet" type="text/css" href="{{asset "css/custom.css"}}"/>
 
     {{! The main JavaScript file for Readable }}
-    <script type="text/javascript" src="{{asset "js/zepto.min.js"}}"></script>
-    <script type="text/javascript" src="{{asset "js/iscroll-infinite.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/jquery-3.1.1.min.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/jquery.infinitescroll.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
 
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
 </head>
-<body class="{{body_class}}" onload="loaded('{{pagination.pages}}')">
+<body class="{{body_class}}" onload="init()">
 
 {{! Everything else gets inserted here }}
 <div class="content">

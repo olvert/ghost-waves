@@ -1,11 +1,8 @@
 {{!< default}}
 <div id="wrapper">
-  <div id="scroller">
-    <ul>
       {{#foreach posts}}
-      <li class="post post-body">
+      <div class="post post-body">
           {{content}}
-
           <div class="post post-foot">
               <div class="post-foot-right">
                   <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD/MM/YY'}}</time>
@@ -14,11 +11,11 @@
                   {{#if tags}}{{tags separator=" "}}{{/if}}
               </div>
           </div>
-      </li>
+      </div>
       {{/foreach}}
-  </ul>
-  </div>
 </div>
+
+<div id="info-loading" class="info"></div>
 
 {{!! After all the posts, we have the previous/next pagination links }}
 {{pagination}}
