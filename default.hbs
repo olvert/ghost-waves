@@ -6,11 +6,14 @@
 
     {{! Style and Scripts }}
     <link rel="stylesheet" type="text/css" href="{{asset "css/custom.css"}}"/>
+    <link rel="shortcut icon" href="{{asset "/favicon.ico"}}" type="image/x-icon">
 
     {{! The main JavaScript file for Readable }}
     <script type="text/javascript" src="{{asset "js/jquery-3.1.1.min.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/jquery.infinitescroll.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+
+    <title>{{@blog.title}}</title>
 
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
