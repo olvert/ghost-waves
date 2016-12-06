@@ -25,20 +25,20 @@ img {
   max-width: 100%;
 }
 
-.title {
-  font-size: 25px;
-  font-weight: 100;
 
-  margin-top: 3vw;
+.title {
+  font-weight: 100;
   margin-left: -0.3vw;
+  margin-top: 3vw;
+  font-size: 25px;
 
 }
 
 .title a, .title a:hover, .title a:visited { text-decoration: none; }
 
 .content {
-  width: 750px;
-  margin: auto;
+  width: 1125px;
+  margin-left: 3%;
 }
 
 .post {
@@ -56,6 +56,8 @@ img {
   display:inline-block;
   width: 100%;
   font-size: 12px;
+
+  margin-top: 1.5vw;
 }
 
 .post-foot {
@@ -110,8 +112,9 @@ img {
 
 /* QUERIES */
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1200px) {
 
+  .content { margin: auto; }
   .post-body, .content { width: auto; }
 
 }
