@@ -9,8 +9,7 @@ var isFinished = false
 var init = function () {
 
   // Dynamic sizing of iframes
-  $('#content').fitVids();
-
+  refreshFitVids();
   // Infinite scrolling
   $('#wrapper').infinitescroll({
     navSelector  : '#nav',
@@ -21,11 +20,15 @@ var init = function () {
       finishedMsg : null,
       msg : null,
       msgText : loading,
-      selector : '#info-loading'
+      selector : '#info-loading',
     },
     bufferPx : 200
-  });
+  }, refreshFitVids);
 
+}
+
+var refreshFitVids = function () {
+  $('#content').fitVids();
 }
 
 var appendFinished = function () {
