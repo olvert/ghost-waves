@@ -11,6 +11,7 @@
     {{! The main JavaScript file for Readable }}
     <script type="text/javascript" src="{{asset "js/jquery-3.1.1.min.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/jquery.infinitescroll.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
 
     <title>{{@blog.title}}</title>
@@ -18,10 +19,10 @@
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
 </head>
-<body class="{{body_class}}" onload="init()">
+<body class="{{body_class}}">
 
 {{! Everything else gets inserted here }}
-<div class="content">
+<div id="content">
     <div class="title"><a id="logo" href="/">{{@blog.title}}</a></div>
     {{{body}}}
 </div>

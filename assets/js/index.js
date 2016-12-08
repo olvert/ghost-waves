@@ -7,6 +7,11 @@ var finished = '<p>The End.</p>'
 var isFinished = false
 
 var init = function () {
+
+  // Dynamic sizing of iframes
+  $('#content').fitVids();
+
+  // Infinite scrolling
   $('#wrapper').infinitescroll({
     navSelector  : '#nav',
     nextSelector : '#next',
@@ -20,9 +25,10 @@ var init = function () {
     },
     bufferPx : 200
   });
+
 }
 
-appendFinished = function () {
+var appendFinished = function () {
 
   // Infinite scroll sometimes reaches finished twice
   if (isFinished) { return; }
@@ -30,3 +36,6 @@ appendFinished = function () {
   isFinished = true;
   $('#info-loading').append(finished);
 }
+
+// Init everything
+$(document).ready(init);
