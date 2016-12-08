@@ -11,6 +11,10 @@ a:hover {
   text-decoration: none;
 }
 
+p {
+  margin: 0;
+}
+
 html,
 body {
   height: 100%;
@@ -36,7 +40,7 @@ img {
 
 .title a, .title a:hover, .title a:visited { text-decoration: none; }
 
-.content {
+#content {
   width: 750px;
   margin: auto;
 }
@@ -56,10 +60,11 @@ img {
   display:inline-block;
   width: 100%;
   font-size: 12px;
+  margin-top: 1.5vw;
 }
 
 .post-foot {
-    margin-top: -14px;
+    margin-top: 5px;
     position: relative;
 
     font-size: 10px;
@@ -112,6 +117,7 @@ img {
 
 @media screen and (max-width: 750px) {
 
-  .post-body, .content { width: auto; }
+  #content { margin: auto; }
+  .post-body, #content { width: 100%; }
 
 }
