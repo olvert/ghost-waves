@@ -33,6 +33,8 @@ img {
   font-weight: 100;
   margin-top: 3vw;
   font-size: 25px;
+
+  margin-left: -0.3vw;
 }
 
 .title a, .title a:hover, .title a:visited { text-decoration: none; }
