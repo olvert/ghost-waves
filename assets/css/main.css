@@ -29,13 +29,10 @@ img {
   max-width: 100%;
 }
 
-
 .title {
   font-weight: 100;
-  margin-left: -0.3vw;
   margin-top: 3vw;
   font-size: 25px;
-
 }
 
 .title a, .title a:hover, .title a:visited { text-decoration: none; }
@@ -59,7 +56,10 @@ img {
   display:inline-block;
   width: 100%;
   font-size: 12px;
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   margin-top: 1.5vw;
 }
 
