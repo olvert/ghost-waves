@@ -83,17 +83,16 @@ img {
 }
 
 .post-foot-left {
-  height: 100%;
   width: 75%;
+
+  float: left;
 }
 
 .post-foot-right {
   text-align: right;
-  position: absolute;
-  height: 100%;
-  top: 0;
-  right: 0;
   width: 25%;
+
+  float: right;
 }
 
 .tag {
