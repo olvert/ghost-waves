@@ -43,6 +43,8 @@ img {
 #content {
   width: 750px;
   margin: auto;
+
+  margin-bottom: 10vw;
 }
 
 .post {
