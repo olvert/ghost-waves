@@ -8,8 +8,8 @@ var maxPage = undefined
 
 var init = function () {
 
-  // Dynamic sizing of iframes
-  refreshFitVids();
+  // Parse and format yt-videos
+  initEmbedyt();
 
   // Infinite scrolling
   $('#wrapper').infinitescroll({
@@ -25,8 +25,12 @@ var init = function () {
     },
     bufferPx : 200,
     maxPage : maxPage
-  }, refreshFitVids);
+  }, onContentUpdate);
 
+}
+
+var onContentUpdate = function () {
+  initEmbedyt();
 }
 
 var setMaxPage = function (max) {
