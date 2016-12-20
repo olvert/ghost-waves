@@ -1,5 +1,5 @@
-<ul class="nav masthead-nav">
+<div id="nav-links">
 	{{#foreach navigation}}
-	<li class="nav-{{label}} {{#if current}}active{{/if}}" role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li>
+		<a href="{{url absolute="true"}}">{{label}}</a>
 	{{/foreach}}
-</ul>
+</div>
