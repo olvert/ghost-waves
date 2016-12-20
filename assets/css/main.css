@@ -51,7 +51,9 @@ img {
   margin-bottom: 0px;
 }
 
-.post-title {}
+.post-title {
+  color: #999999;
+}
 
 .post-head {}
 
