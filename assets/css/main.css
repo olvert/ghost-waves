@@ -29,7 +29,7 @@ img {
   max-width: 100%;
 }
 
-.title {
+#title {
   font-size: 25px;
   font-weight: 100;
 
@@ -38,7 +38,7 @@ img {
 
 }
 
-.title a, .title a:hover, .title a:visited { text-decoration: none; }
+#title a, #title a:hover, #title a:visited { text-decoration: none; }
 
 #content {
   margin-bottom: 10vw;
