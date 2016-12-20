@@ -1,0 +1,10 @@
+{{!< default}}
+<div id="wrapper">
+  <div id="tags">
+    {{#get "tags" limit="all" order="name asc"}}
+      {{#foreach tags}}
+        <div><a href="{{url}}">{{name}}</a></div>
+      {{/foreach}}
+    {{/get}}
+  </div>
+</div>

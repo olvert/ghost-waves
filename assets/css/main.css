@@ -111,7 +111,7 @@ img {
   margin-bottom: 30px;
 }
 
-/* yt.js */
+/* embedyt.js */
 
 .embedyt {
     position: relative;
@@ -158,4 +158,20 @@ img {
     top: 0; left: 0; bottom: 0; right: 0;
     cursor: pointer;
     color: #FFFFFF;
+}
+
+/* tags */
+
+#tags {
+
+  margin-top: 5%;
+  display: inline-block;
+}
+
+#tags a {
+  font-size: 25px;
+}
+
+#tags a:hover {
+  border-bottom: 3px solid #333333;
 }
