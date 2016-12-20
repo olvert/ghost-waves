@@ -4,6 +4,11 @@
   src: url('assets/fonts/Futura.ttc')  format('truetype'), /* Safari, Android, iOS */
 }
 
+html {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+}
+
 a,
 a:focus,
 a:hover {
@@ -29,7 +34,8 @@ img {
   max-width: 100%;
 }
 
-.title {
+#title {
+  font-size: 25px;
   font-weight: 100;
   margin-top: 3vw;
   font-size: 25px;
@@ -37,7 +43,7 @@ img {
   margin-left: -0.3vw;
 }
 
-.title a, .title a:hover, .title a:visited { text-decoration: none; }
+#title a, #title a:hover, #title a:visited { text-decoration: none; }
 
 #content {
   margin-bottom: 10vw;
@@ -111,7 +117,7 @@ img {
   margin-bottom: 30px;
 }
 
-/* yt.js */
+/* EMBEDYT.JS */
 
 .embedyt {
     position: relative;
@@ -158,4 +164,39 @@ img {
     top: 0; left: 0; bottom: 0; right: 0;
     cursor: pointer;
     color: #FFFFFF;
+}
+
+/* TAGS */
+
+#tags {
+
+  margin-top: 5%;
+  display: inline-block;
+}
+
+#tags a {
+  font-size: 25px;
+}
+
+#tags a:hover {
+  border-bottom: 3px solid #333333;
+}
+
+/* NAV LINKS */
+
+#nav-links {
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+#nav-links a {
+  margin-right: 5px;
+  color: #999999;
+  text-decoration: underline;
+}
+
+#nav-links a:hover {
+  color: #333333;
 }
