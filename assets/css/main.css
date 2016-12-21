@@ -4,6 +4,11 @@
   src: url('assets/fonts/Futura.ttc')  format('truetype'), /* Safari, Android, iOS */
 }
 
+html {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+}
+
 a,
 a:focus,
 a:hover {
@@ -68,7 +73,7 @@ img {
     margin-top: 5px;
     position: relative;
 
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .post-foot a {
@@ -113,7 +118,7 @@ img {
   margin-bottom: 30px;
 }
 
-/* embedyt.js */
+/* EMBEDYT.JS */
 
 .embedyt {
     position: relative;
@@ -162,7 +167,7 @@ img {
     color: #FFFFFF;
 }
 
-/* tags */
+/* TAGS */
 
 #tags {
 
@@ -176,4 +181,23 @@ img {
 
 #tags a:hover {
   border-bottom: 3px solid #333333;
+}
+
+/* NAV LINKS */
+
+#nav-links {
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+#nav-links a {
+  margin-right: 5px;
+  color: #999999;
+  text-decoration: underline;
+}
+
+#nav-links a:hover {
+  color: #333333;
 }
