@@ -8,6 +8,7 @@
                   <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD/MM/YY'}}</time>
               </div>
               <div class="post-foot-left">
+                  {{#has tag="#show_title"}}<span class="post-title">{{title}} / </span>{{/has}}
                   {{#if tags}}{{tags separator=" / "}}{{/if}}
               </div>
           </div>
