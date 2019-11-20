@@ -1,7 +1,8 @@
 {
-	"name": "olmn-waves",
-	"version": "1.5.1",
+	"name": "ghost-waves",
+	"version": "0.1.0",
 	"author": {
+		"name": "Olle Svensson",
 		"email": "me@olle.io"
 	}
 }
