@@ -13,9 +13,11 @@ results
 
 npm-debug.log
 node_modules
+dist
 
 .idea/*
 *.iml
 projectFilesBackup
 
 .DS_Store
+mix-manifest.json
