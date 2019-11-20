@@ -1,3 +1,16 @@
+# Folders
+pids
+logs
+results
+node_modules
+dist
+assets
+
+# Files
+.DS_Store
+mix-manifest.json
+npm-debug.log
+
 b-cov
 *.seed
 *.log
@@ -6,18 +19,3 @@ b-cov
 *.out
 *.pid
 *.gz
-
-pids
-logs
-results
-
-npm-debug.log
-node_modules
-dist
-
-.idea/*
-*.iml
-projectFilesBackup
-
-.DS_Store
-mix-manifest.json
