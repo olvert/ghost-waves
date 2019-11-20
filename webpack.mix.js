@@ -55,8 +55,22 @@ mix.options({
     postCss: [ tailwindcss('tailwind.config.js') ],
     processCssUrls: false,
   })
+  .webpackConfig({
+    module: {
+      rules: [
+        {
+          test: /\.tsx?$/,
+          loader: "ts-loader",
+          exclude: /node_modules/
+        }
+      ]
+    },
+    resolve: {
+      extensions: ["*", ".js", ".jsx", ".vue", ".ts", ".tsx"]
+    }
+  })
   .copyDirectory('src/fonts', 'assets/fonts')
-  .js('src/js/app.js', 'assets/js')
+  .ts('src/js/app.ts', 'assets/js')
   .sass('src/scss/app.scss', 'assets/css');
 
 // Full API
