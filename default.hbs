@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="content-type" content="text/html" charset="utf-8"/>
+<meta http-equiv="content-type" content="text/html" charset="utf-8"/>
 
-    <link rel="stylesheet" type="text/css" href="{{asset "css/main.css"}}"/>
+  <link rel="stylesheet" type="text/css" href="{{asset "css/app.css"}}"/>
 
-    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+  <script type="text/javascript" src="{{asset "js/app.js"}}"></script>
 
-    <title>{{@blog.title}}</title>
+  <title>{{@blog.title}}</title>
 
-    {{ghost_head}}
+  {{ghost_head}}
 </head>
 <body class="{{body_class}}">
 
 <div id="content">
-    <div id="title"><a id="logo" href="/">{{@blog.title}}</a></div>
-    {{navigation}}
-    {{{body}}}
+  <div id="title"><a id="logo" href="/">{{@blog.title}}</a></div>
+  {{navigation}}
+  {{{body}}}
 </div>
 
 {{ghost_foot}}

@@ -1,3 +1,5 @@
-export function helloWorld(): string {
-  return "Hello world!";
-}
+import Embedyt from './embedyt';
+
+window.addEventListener('DOMContentLoaded', () => {
+  Embedyt.init();
+});
