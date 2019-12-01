@@ -111,6 +111,6 @@ export default abstract class Embedyt {
   }
 
   public static init(): void {
-    this.getUninitializedElems().map((e: HTMLDivElement) => this.initElem(e));
+    Embedyt.getUninitializedElems().map((e: HTMLDivElement) => Embedyt.initElem(e));
   }
 }
