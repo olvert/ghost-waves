@@ -1,0 +1,18 @@
+#tags {
+
+  columns: 2;
+
+  @screen lg {
+    columns: 3;
+  }
+
+  .tag {
+    a {
+      @apply text-xl border-blackish;
+  
+      &:hover {
+        @apply border-b-2;
+      }
+    }
+  }
+}

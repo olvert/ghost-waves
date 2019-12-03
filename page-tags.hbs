@@ -3,7 +3,9 @@
   <div id="tags">
     {{#get "tags" limit="all" order="name asc"}}
       {{#foreach tags}}
-        <div><a href="{{url}}">{{name}}</a></div>
+        <div class="tag">
+          <a href="{{url}}">{{name}}</a>
+        </div>
       {{/foreach}}
     {{/get}}
   </div>

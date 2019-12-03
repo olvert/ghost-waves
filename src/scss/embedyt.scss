@@ -1,0 +1,13 @@
+.embedyt {
+  @apply relative h-0 overflow-hidden max-w-full bg-black;
+
+  padding-bottom: 56.23%; /* Use 75% for 4:3 videos */
+
+  iframe {
+    @apply absolute top-0 left-0 w-full h-full z-20;
+  }
+
+  img {
+    @apply absolute inset-0 block w-full cursor-pointer;
+  }
+}
