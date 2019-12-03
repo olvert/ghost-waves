@@ -1,0 +1,9 @@
+img {
+  @apply invisible opacity-0;
+
+  transition: opacity 0.3s ease-in-out;
+
+  &.loaded, &.no-fade {
+    @apply visible opacity-100;
+  }
+}
