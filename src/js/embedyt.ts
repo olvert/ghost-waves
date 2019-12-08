@@ -6,7 +6,13 @@ export default abstract class Embedyt {
   private static readonly classes = {
     embedyt: 'embedyt',
     init: 'init',
+    thumbnailWrapper: 'embedyt-thumb-wrapper',
+    thumbnail: 'embedyt-thumb',
+    playIcon: 'play-icon',
+    noFade: 'no-fade',
   }
+
+  private static readonly iconUrl = '/assets/icons/play-solid.svg';
 
   private static readonly youtube = {
     attribute: 'yt',
@@ -26,14 +32,21 @@ export default abstract class Embedyt {
     return [].slice.call(document.querySelectorAll(selector));
   }
 
+  private static getThumbnailImgElement(): HTMLImageElement {
+    const img = document.createElement('img');
+    img.classList.add(this.classes.thumbnail);
+
+    return img;
+  }
+
   private static getYoutubeThumbnail(id: string): HTMLImageElement {
-    const img: HTMLImageElement = document.createElement('img');
+    const img: HTMLImageElement = this.getThumbnailImgElement();
     img.src = sprintf(this.youtube.thumbnailUrl, id);
     return img;
   }
 
   private static getVimeoThumbnail(id: string): HTMLImageElement {
-    const img: HTMLImageElement = document.createElement('img');
+    const img: HTMLImageElement = this.getThumbnailImgElement();
     const url: string = sprintf(this.vimeo.jsonUrl, id);
 
     const handleResponse = async (response: Response): Promise<any> => {
@@ -100,11 +113,28 @@ export default abstract class Embedyt {
     targetElem.replaceWith(frameElem);
   }
 
+  private static getPlayIcon(): HTMLDivElement {
+    const img: HTMLImageElement = document.createElement('img');
+    const div: HTMLDivElement = document.createElement('div');
+
+    img.src = this.iconUrl;
+    img.classList.add(this.classes.noFade);
+
+    div.classList.add(this.classes.playIcon);
+    div.append(img);
+
+    return div;
+  }
+
   private static initElem(videoElem: HTMLDivElement): void {
     const { id, vsrc } = videoElem.dataset;
     const div: HTMLDivElement = document.createElement('div');
     const thumbnail: HTMLImageElement = this.getThumbnailElement(id, vsrc);
+    const playIcon: HTMLDivElement = this.getPlayIcon();
 
+    div.classList.add(this.classes.thumbnailWrapper);
+
+    div.append(playIcon);
     div.append(thumbnail);
     videoElem.append(div);
     videoElem.addEventListener('click', (e) => this.replaceWithFrame(e));

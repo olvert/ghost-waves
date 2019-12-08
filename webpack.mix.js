@@ -70,6 +70,7 @@ mix.options({
     }
   })
   .copyDirectory('src/fonts', 'assets/fonts')
+  .copyDirectory('src/icons', 'assets/icons')
   .ts('src/js/app.ts', 'assets/js')
   .sass('src/scss/app.scss', 'assets/css');
 

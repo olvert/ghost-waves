@@ -1,6 +1,14 @@
 module.exports = {
   theme: {
     extend: {
+      borderRadius: {
+        none: '0',
+        sm: '0.125rem',
+        default: '0.25rem',
+        lg: '0.5rem',
+        full: '9999px',
+        circle: '50%',
+      },
       colors: {
         grayish: '#999999',
         blackish: '#333333',

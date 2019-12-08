@@ -7,7 +7,23 @@
     @apply absolute top-0 left-0 w-full h-full z-20;
   }
 
-  img {
-    @apply absolute inset-0 block w-full cursor-pointer;
+  .embedyt-thumb-wrapper {
+    @apply absolute inset-0 flex items-center justify-center;
+
+    .play-icon {
+      @apply relative z-10 bg-white rounded-circle p-5 shadow-xl cursor-pointer;
+
+      img {
+        @apply w-6 h-6;
+
+        padding-left: 2px;
+      }
+    }
+
+    img {
+      &.embedyt-thumb {
+        @apply absolute inset-0 block w-full cursor-pointer;
+      }
+    }
   }
 }
