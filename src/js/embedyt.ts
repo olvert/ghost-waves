@@ -132,6 +132,8 @@ export default abstract class Embedyt {
     div.append(thumbnail);
     videoElem.append(div);
     videoElem.addEventListener('click', () => this.replaceWithFrame(id, vsrc, div));
+
+    videoElem.classList.remove(this.classes.init);
   }
 
   public static init(): void {
