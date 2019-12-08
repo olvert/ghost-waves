@@ -91,7 +91,7 @@ export default abstract class Embedyt {
     }
   }
 
-  private static getFrameElement(id: string = '', vsrc: string = ''): HTMLIFrameElement {
+  private static getFrameElement(id: string, vsrc: string): HTMLIFrameElement {
     const frame: HTMLIFrameElement = document.createElement('iframe');
     const embedUrl: string = this.getEmbedUrl(id, vsrc);
 
@@ -102,15 +102,9 @@ export default abstract class Embedyt {
     return frame;
   }
 
-  private static replaceWithFrame(event: MouseEvent): void {
-    const selector: string = `.${this.classes.embedyt}`;
-    const targetElem: HTMLImageElement = event.target as HTMLImageElement;
-    const parentElem: HTMLDivElement = targetElem.closest(selector) as HTMLDivElement;
-    const { id, vsrc } = parentElem.dataset;
-
+  private static replaceWithFrame(id: string = '', vsrc: string = '', divToReplace: HTMLDivElement): void {
     const frameElem: HTMLIFrameElement = this.getFrameElement(id, vsrc);
-
-    targetElem.replaceWith(frameElem);
+    divToReplace.replaceWith(frameElem);
   }
 
   private static getPlayIcon(): HTMLDivElement {
@@ -137,7 +131,7 @@ export default abstract class Embedyt {
     div.append(playIcon);
     div.append(thumbnail);
     videoElem.append(div);
-    videoElem.addEventListener('click', (e) => this.replaceWithFrame(e));
+    videoElem.addEventListener('click', () => this.replaceWithFrame(id, vsrc, div));
   }
 
   public static init(): void {
