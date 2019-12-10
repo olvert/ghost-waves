@@ -1,0 +1,13 @@
+#loading-info {
+  span {
+    @apply invisible opacity-0;
+
+    transition: opacity 400ms ease-in-out;
+  }
+
+  &.loading {
+    span.loading {
+      @apply visible opacity-100;
+    }
+  }
+}

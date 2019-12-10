@@ -17,3 +17,12 @@ To avoid the explosion of ajax-requests from multiple iframes, this theme offers
 At the moment, Vimeo is supported as well, just change 'yt' to 'vimeo' and add the Vimeo video id.
 
 By doing this, the theme will only load and display the thumbnail of the video until the video is clicked. Once clicked, the thumbnail image will replaced with the regular iframe. This gives a huge performance increase in loading time compared to pasting iframes into posts directly.
+
+## TODO
+- Loading messages
+- Responsive
+- Favicon + title
+- Filter on tags page?
+- Show active tag?
+- Clean up templates / HTML?
+- Optimize for Lighthouse?
