@@ -4,7 +4,7 @@
     <div class="post w-full inline-block mb-3 sm:mb-4 lg:mb-6">
         {{content}}
         <div class="post-foot flex justify-between mt-1 text-xxs sm:text-xs">
-            <div>
+            <div class="flex-grow">
                 {{#has tag="#show_title"}}
                     <span class="text-grayish">{{title}} / </span>
                 {{/has}}
@@ -12,7 +12,7 @@
                     {{tags separator=" / "}}
                 {{/if}}
             </div>
-            <div>
+            <div class="flex-none pl-2">
                 <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD/MM/YY'}}</time>
             </div>
         </div>
