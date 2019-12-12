@@ -11,10 +11,18 @@
     @apply absolute inset-0 flex items-center justify-center;
 
     .play-icon {
-      @apply relative z-10 bg-white rounded-circle p-5 shadow-xl cursor-pointer;
+      @apply relative z-10 bg-white rounded-circle p-3 shadow-xl cursor-pointer;
+
+      @screen sm {
+        @apply p-5;
+      }
 
       img {
-        @apply w-6 h-6;
+        @apply w-3 h-3;
+
+        @screen sm {
+          @apply w-6 h-6
+        }
 
         padding-left: 2px;
       }
