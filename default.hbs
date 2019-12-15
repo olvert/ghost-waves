@@ -1,22 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="content-type" content="text/html" charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-
-  <link rel="stylesheet" type="text/css" href="{{asset "css/app.css"}}"/>
-
-  <script type="text/javascript" src="{{asset "js/app.js"}}"></script>
-
-  <title>{{@blog.title}}</title>
-
+  {{> head}}
   {{ghost_head}}
 </head>
 <body class="{{body_class}}">
 
 <div class="container mx-auto lg:mx-0 px-2 lg:px-4 xl:pl-8 pt-4 sm:pt-6 xl:pt-10 pb-16 xl:pr-32">
-  <a id="site-title" class="text-2xl sm:text-3xl inline-block -ml-1" href="/">| {{@blog.title}} |</a>
-  {{navigation}}
+  {{> header}}
   {{{body}}}
 </div>
 
