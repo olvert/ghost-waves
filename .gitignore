@@ -10,6 +10,7 @@ assets
 .DS_Store
 mix-manifest.json
 npm-debug.log
+ghost-waves.zip
 
 b-cov
 *.seed

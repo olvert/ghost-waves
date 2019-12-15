@@ -21,6 +21,7 @@ By doing this, the theme will only load and display the thumbnail of the video u
 ## TODO
 - Update README?
 - Build script?
+- 404, unused templates?
 - Show active page name?
 - Show active tag name?
 - Filter on tags page?
