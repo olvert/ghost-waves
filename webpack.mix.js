@@ -36,6 +36,7 @@ if (mix.inProduction()) {
         paths: glob.sync([
           path.join(__dirname, "*.hbs"),
           path.join(__dirname, "partials/*.hbs"),
+          path.join(__dirname, "src/js/*.ts"),
         ]),
         extractors: [
           {
