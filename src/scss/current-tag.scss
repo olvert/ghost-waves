@@ -1,0 +1,9 @@
+#current-tag {
+  a {
+    @apply border-transparent border-b-2;
+
+    &:hover {
+      @apply border-blackish;
+    }
+  }
+}

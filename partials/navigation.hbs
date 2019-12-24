@@ -1,5 +1,7 @@
-<nav role="navigation" class="mt-2 sm:mt-3 mb-4 sm:mb-6 lg:mb-8">
-	{{#foreach navigation}}
-		<a class="text-sm sm:text-base text-grayish hover:text-blackish mr-1 sm:mr-2" href="{{url absolute="true"}}">{{label}}</a>
-	{{/foreach}}
-</nav>
+<div class="mt-2 sm:mt-3 mb-4 sm:mb-6 lg:mb-8">
+	<nav role="navigation">
+		{{#foreach navigation}}
+			<a class="text-sm sm:text-base text-grayish hover:text-blackish mr-1 sm:mr-2" href="{{url absolute="true"}}">{{label}}</a>
+		{{/foreach}}
+	</nav>
+</div>
