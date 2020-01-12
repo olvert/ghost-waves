@@ -1,5 +1,7 @@
 import imagesLoaded from 'imagesloaded';
 
+import MasonrySingleton from './masonry-singleton';
+
 export default abstract class ImagesLoaded {
   private static readonly classes = {
     selector: '#wrapper',
@@ -16,6 +18,12 @@ export default abstract class ImagesLoaded {
 
     imgLoad.on('always', (instance) => {
       instance.images.map((image) => this.setImageAsLoaded(image.img));
+
+      const { masonry } = MasonrySingleton.getInstance();
+      if (masonry && masonry.layout) {
+        masonry.layout();
+        console.log('Running layout');
+      }
     });
 
     imgLoad.on('progress', (instance, image) => {

@@ -1,6 +1,10 @@
 // @ts-ignore
 import InfinteScroll from 'infinite-scroll';
 
+import MasonrySingleton from './masonry-singleton';
+import Embedyt from './embedyt';
+import ImagesLoaded from './images-loaded';
+
 export default class InfiniteScrollSingleton {
   private static readonly selectors = {
     container: '#wrapper',
@@ -35,7 +39,7 @@ export default class InfiniteScrollSingleton {
       container,
       {
         path: iis.selectors.path,
-        append: iis.selectors.append,
+        // append: iis.selectors.append,
         history: false,
       },
     );
@@ -50,6 +54,22 @@ export default class InfiniteScrollSingleton {
 
     this.bindEvent(this.events.load, () => {
       this.loadingInfo.classList.remove(this.classes.loading);
+    });
+
+    this.bindEvent(this.events.load, (response: HTMLDocument, path: any) => {
+      // console.log('loaded page', response, path);
+      const posts = [].slice.call(response.querySelectorAll('.post'));
+      const container = document.querySelector('#wrapper') as HTMLDivElement;
+      const { masonry } = MasonrySingleton.getInstance();
+
+      if (masonry.appended) {
+        posts.map((p) => container.appendChild(p));
+        masonry.appended(posts);
+        console.log('adding items', posts);
+
+        Embedyt.init();
+        ImagesLoaded.init();
+      }
     });
   }
 

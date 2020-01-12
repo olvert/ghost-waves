@@ -1,6 +1,7 @@
 import Embedyt from './embedyt';
 import ImagesLoaded from './images-loaded';
 import InfiniteScrollSingleton from './infinite-scroll-singleton';
+import MasonrySingleton from './masonry-singleton';
 
 const initInfiniteScroll = (): void => {
   const scrollSingleton: InfiniteScrollSingleton = InfiniteScrollSingleton.getInstance();
@@ -11,6 +12,7 @@ const initInfiniteScroll = (): void => {
 };
 
 window.addEventListener('DOMContentLoaded', () => {
+  MasonrySingleton.getInstance();
   Embedyt.init();
   ImagesLoaded.init();
 
